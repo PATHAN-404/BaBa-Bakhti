@@ -15,28 +15,28 @@ except ModuleNotFoundError:
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python Bakhti.py')
 	
-print('[•] Join Whatsap Group')
+print('\033[1;33m[•] Join Whatsap Group')
 os.system('xdg-open https://chat.whatsapp.com/B8pdA0uNxH88NnC38CIgVP')
 
 try:
-	prox= requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/proxies.txt').text
+	prox= requests.get('https://raw.githubusercontent.com/ZMuKhLiS352/data/main/proxies.txt').text
 	open('proxies.txt','w').write(proxies)
 except Exception as e:
-	print('\x1b[1;95m[√] LOADING...')
+	print('\033[1;32m[√] LOADING...')
 	
 proxies=open('proxies.txt','r').read().splitlines()
 
 
 android_models=[]
 try:
-	xx = requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/strings.txt').text.splitlines()
+	xx = requests.get('https://raw.githubusercontent.com/ZMuKhLiS352/data/main/strings.txt').text.splitlines()
 	for line in xx:
 		android_models.append(line)
 except:pass
 
 usr=[]
 try:
-	xd=requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/ua.txt').text.splitlines()
+	xd=requests.get('https://raw.githubusercontent.com/ZMuKhLiS352/data/main/ua.txt').text.splitlines()
 	for us in xd:
 		usr.append(us)
 except: pass
@@ -229,25 +229,25 @@ def main_apv():
         
 
 logo=("""\033[1;91m                                                      
-@@@@@@@    @@@@@@   @@@  @@@  @@@  @@@  @@@@@@@  @@@  
-@@@@@@@@  @@@@@@@@  @@@  @@@  @@@  @@@  @@@@@@@  @@@  
-@@!  @@@  @@!  @@@  @@!  !@@  @@!  @@@    @@!    @@!  
-!@   @!@  !@!  @!@  !@!  @!!  !@!  @!@    !@!    !@!  
-@!@!@!@   @!@!@!@!  @!@@!@!   @!@!@!@!    @!!    !!@  
-!!!@!!!!  !!!@!!!!  !!@!!!    !!!@!!!!    !!!    !!!  
-!!:  !!!  !!:  !!!  !!: :!!   !!:  !!!    !!:    !!:  
-:!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!    :!:    :!:  
- :: ::::  ::   :::   ::  :::  ::   :::     ::     ::  
-:: : ::    :   : :   :   :::   :   : :     :     :    
+   \033[1;32m@@@@@@@    @@@@@@   @@@  @@@  @@@  @@@  @@@@@@@  @@@  
+   \033[1;32m@@@@@@@@  @@@@@@@@  @@@  @@@  @@@  @@@  @@@@@@@  @@@  
+   \033[1;32m@@!  @@@  @@!  @@@  @@!  !@@  @@!  @@@    @@!    @@!  
+   \033[1;35m!@   @!@  !@!  @!@  !@!  @!!  !@!  @!@    !@!    !@!  
+   \033[1;35m@!@!@!@   @!@!@!@!  @!@@!@!   @!@!@!@!    @!!    !!@  
+   \033[1;33m!!!@!!!!  !!!@!!!!  !!@!!!    !!!@!!!!    !!!    !!!  
+   \033[1;33m!!:  !!!  !!:  !!!  !!: :!!   !!:  !!!    !!:    !!:  
+   \033[1;31m:!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!    :!:    :!:  
+   \033[1;31m :: ::::  ::   :::   ::  :::  ::   :::     ::     ::  
+   \033[1;31m :: : ::    :   : :   :   :::   :   : :     :     :    
     \33[47;1m\33[1;91m[ PRO ]   \33[00;1m\33[41;1m   \33[1;97m[ POWERED BY BAKHTI ]   \33[00;1m\33[47;1m   \33[1;91m[ PRO ]\33[00;1m
-\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{WHITE}[\033[1;33m⍣\033[1;33m{WHITE}\033[1;34m]{WHITE} OWNER        :  Bakhti Rahman
-[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} FaceBook     :  Bakhti Rahman 
-[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} Version      :  {RED}1.0
-{WHITE}[\033[1;33m⍣\033[1;33m{WHITE}]{WHITE} TOOL Status  :  Paid
-\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m""")
+\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+\033[1;37m[\033[1;33m<>\033[1;33m\033[1;37m\033[1;34m]\033[1;37m OWNER        :  Bakhti Rahman
+[\033[1;33m<>\033[1;33m\033[1;37m]\033[1;37m FaceBook     :  Bakhti Rahman 
+[\033[1;33m<>\033[1;33m\033[1;37m]\033[1;37m Version      :  {RED}1.0
+\033[1;37m[\033[1;33m<>\033[1;33m\033[1;37m]\033[1;37m TOOL Status  :  Paid
+\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m""")
 def linex():
-    print('\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m')
+    print('\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;37m')
 def clear():
 	os.system('clear')
 	print(logo)
@@ -469,7 +469,7 @@ def gmail():
 		linex()
 		pxc = input(' Choose : ')
 		clear()
-		print('\033[1;32m [1] \033[1;33mMethod   (best) \033[1;32m \n [2] \033[1;33mMethod   (v-fast)  \033[1;32m \n [3] \033[1;33mMethod   (v-best)  \033[1;32m \n [4] \033[1;33mMethod   (slow) \033[1;32m \n [5] \033[1;33mMethod   (slow)  \033[1;32m \n [6] \033[1;33mMethod   (slow) ')
+		print('\033[1;32m [1] \033[1;35mMethod   (best) \033[1;32m \n [2] \033[1;35mMethod   (v-fast)  \033[1;32m \n [3] \033[1;35mMethod   (v-best)  \033[1;32m \n [4] \033[1;35mMethod   (slow) \033[1;32m \n [5] \033[1;35mMethod   (slow)  \033[1;32m \n [6] \033[1;35mMethod   (slow) ')
 		linex()
 		mthd = input(' Choose: ')
 		linex()
