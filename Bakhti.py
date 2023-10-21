@@ -15,8 +15,8 @@ except ModuleNotFoundError:
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python Bakhti.py')
 	
-print('\033[1;33m[•] Join Whatsap Group')
-os.system('xdg-open https://chat.whatsapp.com/B8pdA0uNxH88NnC38CIgVP')
+print('\033[1;36m[•] Join Whatsap Group')
+os.system('xdg-open https://chat.whatsapp.com/LKq5EEX46K8LFmJsAnFJcd')
 
 try:
 	prox= requests.get('https://raw.githubusercontent.com/ZMuKhLiS352/data/main/proxies.txt').text
